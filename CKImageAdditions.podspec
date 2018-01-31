@@ -6,6 +6,6 @@ Pod::Spec.new do |s|
   s.license      = 'MIT'
   s.author       = { "Cory Kilger" => "cmkilger@gmail.com" }
   s.source       = { :git => "https://github.com/macguru/CKImageAdditions.git", :branch => "master" }
-  s.platform     = :ios, '3.0'
+  s.platform     = :ios, '9.0'
   s.source_files = 'ImageAdditions'
 end
