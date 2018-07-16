@@ -36,7 +36,7 @@
  @param      image The image from which to create a context.
  @result     Returns a bitmap context which contains the image.
  */
-CGContextRef CKBitmapContextCreate(CGSize size) CG_AVAILABLE_STARTING(__MAC_10_6, __IPHONE_4_0);
+CGContextRef CKBitmapContextCreate(CGSize size);
 
 /*!
  @function
@@ -46,7 +46,7 @@ CGContextRef CKBitmapContextCreate(CGSize size) CG_AVAILABLE_STARTING(__MAC_10_6
  @param      data Pass in the address of a void *. Upon return the void * will contain the address of the bitmap data. This data should be free'd at the same time as releasing the context. Passing NULL behaves the same as CKBitmapContextCreate().
  @result     Returns a bitmap context which contains the image and the bitmap data by reference.
  */
-CGContextRef CKBitmapContextAndDataCreate(CGSize size, void ** data) CG_AVAILABLE_STARTING(__MAC_10_0, __IPHONE_2_0);
+CGContextRef CKBitmapContextAndDataCreate(CGSize size, void ** data);
 
 /*!
  @function
@@ -55,7 +55,7 @@ CGContextRef CKBitmapContextAndDataCreate(CGSize size, void ** data) CG_AVAILABL
  @param      image The image from which to create a context.
  @result     Returns a bitmap context which contains the image.
  */
-CGContextRef CKBitmapContextCreateWithImage(CGImageRef image) CG_AVAILABLE_STARTING(__MAC_10_6, __IPHONE_4_0);
+CGContextRef CKBitmapContextCreateWithImage(CGImageRef image);
 
 /*!
  @function
@@ -65,12 +65,12 @@ CGContextRef CKBitmapContextCreateWithImage(CGImageRef image) CG_AVAILABLE_START
  @param      data Pass in the address of a void *. Upon return the void * will contain the address of the bitmap data. This data should be free'd at the same time as releasing the context. Passing NULL behaves the same as CKBitmapContextCreateWithImage().
  @result     Returns a bitmap context which contains the image and the bitmap data by reference.
  */
-CGContextRef CKBitmapContextAndDataCreateWithImage(CGImageRef image, void ** data) CG_AVAILABLE_STARTING(__MAC_10_2, __IPHONE_2_0);
+CGContextRef CKBitmapContextAndDataCreateWithImage(CGImageRef image, void ** data);
 
 #pragma mark -
 #pragma mark Paths
 
-CGPathRef CKPathCreateWithRoundedRect(CGRect rect, CGFloat radius) CG_AVAILABLE_STARTING(__MAC_10_2, __IPHONE_2_0);
+CGPathRef CKPathCreateWithRoundedRect(CGRect rect, CGFloat radius);
 
 #pragma mark -
 #pragma mark Blending
@@ -85,7 +85,7 @@ CGPathRef CKPathCreateWithRoundedRect(CGRect rect, CGFloat radius) CG_AVAILABLE_
  @param      offset The offset of the top image in relation to the bottom image.
  @result     Returns a CGImageRef of the resulting image.
  */
-CGImageRef CKImageCreateByBlendingImages(CGImageRef bottom, CGImageRef top, CGBlendMode blendMode, CGPoint offset) CG_AVAILABLE_STARTING(__MAC_10_4, __IPHONE_2_0);
+CGImageRef CKImageCreateByBlendingImages(CGImageRef bottom, CGImageRef top, CGBlendMode blendMode, CGPoint offset);
 
 #pragma mark -
 #pragma mark Trimming
@@ -99,7 +99,7 @@ typedef enum {
 	CKImageTrimmingSidesAll    = 0xF,
 } CKImageTrimmingSides;
 
-CGImageRef CKImageCreateByTrimmingTransparency(CGImageRef image, CKImageTrimmingSides sides) CG_AVAILABLE_STARTING(__MAC_10_2, __IPHONE_2_0);
-CGImageRef CKImageCreateByTrimmingColor(CGImageRef image, CGColorRef color, CKImageTrimmingSides sides) CG_AVAILABLE_STARTING(__MAC_10_2, __IPHONE_2_0);
+CGImageRef CKImageCreateByTrimmingTransparency(CGImageRef image, CKImageTrimmingSides sides);
+CGImageRef CKImageCreateByTrimmingColor(CGImageRef image, CGColorRef color, CKImageTrimmingSides sides);
 
 #endif
